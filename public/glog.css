@@ -1,8 +1,8 @@
-.commit {
+.commit_summary {
   background: #eaf2f5;
   border: 1px solid #bedce7;
   margin: 10px;
 }
-.commit p {
+.commit_summary p {
   margin: 10px;
 }

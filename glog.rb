@@ -11,3 +11,9 @@ get '/commits' do
   @commits = repo.commits('master', 10)
   erb :commits
 end
+
+get '/commits/:id' do
+  repo = Grit::Repo.new('.')
+  @commit = repo.commits(params[:id]).first
+  erb :commit
+end

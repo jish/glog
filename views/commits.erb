@@ -1,6 +1,8 @@
 <% @commits.each do |commit| %>
-  <div class="commit">
-    <p><%= commit.message %></p>
+  <div class="commit_summary">
+    <p>
+      <a href="/commits/<%= commit.id %>"><pre><%= commit.message.split("\n").first %></pre></a>
+    </p>
     <p><%= commit.committer %></p>
   </div>
 <% end %>
