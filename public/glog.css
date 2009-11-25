@@ -1,0 +1,8 @@
+.commit {
+  background: #eaf2f5;
+  border: 1px solid #bedce7;
+  margin: 10px;
+}
+.commit p {
+  margin: 10px;
+}
