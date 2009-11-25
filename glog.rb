@@ -3,7 +3,7 @@ require 'grit'
 require 'erb'
 
 get '/' do
-  'Hello glog'
+  erb 'Hello glog'
 end
 
 get '/commits' do
