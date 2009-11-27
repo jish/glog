@@ -20,4 +20,8 @@ describe RepoList do
     RepoList.list.each { |r| r.should be_an_instance_of(Grit::Repo) }
   end
 
+  it "should return the repo for the name" do
+    RepoList.list.should include(RepoList['repo1'])
+  end
+
 end
