@@ -2,6 +2,10 @@ require 'sinatra'
 require 'grit'
 require 'erb'
 
+$: << File.join(File.dirname(__FILE__), 'lib')
+require 'grit_ext/repo'
+require 'repo_list'
+
 get '/' do
   erb 'Hello glog'
 end
