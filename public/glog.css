@@ -1,3 +1,9 @@
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: small;
+}
+
 .commit_summary {
   background: #eaf2f5;
   border: 1px solid #bedce7;
@@ -5,4 +11,20 @@
 }
 .commit_summary p {
   margin: 10px;
+}
+
+#head h1 {
+  margin: 0;
+}
+#head h1 a {
+  color: #282;
+  text-decoration: none;
+}
+#head p.beta_tag {
+  font-size: 1.2em;
+  margin: -10px 0 0 15px;
+}
+#head p.beta_tag a {
+  color: #999;
+  text-decoration: none;
 }
