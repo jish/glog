@@ -17,6 +17,10 @@ a {
   margin: 10px;
 }
 
+.diff {
+  margin: 10px;
+}
+
 .repo_list {
   list-style-type: none;
   margin: 0;

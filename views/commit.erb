@@ -3,3 +3,8 @@
   <p><%= @commit.committer %></p>
 </div>
 
+<% @commit.show.each do |c| %>
+  <div class="diff">
+    <pre><%= ERB::Util.h(c.diff) %></pre>
+  </div>
+<% end %>
