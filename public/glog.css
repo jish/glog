@@ -3,6 +3,10 @@ body {
   font-family: Arial, sans-serif;
   font-size: small;
 }
+a {
+  outline: none;
+  text-decoration: none;
+}
 
 .commit_summary {
   background: #eaf2f5;
@@ -13,12 +17,29 @@ body {
   margin: 10px;
 }
 
+.repo_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 250px;
+}
+.repo_list a {
+  display: block;
+  font-weight: bold;
+  padding: 3px 8px;
+
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+.repo_list a:hover {
+  background: #eee;
+}
+
 #head h1 {
   margin: 0;
 }
 #head h1 a {
   color: #282;
-  text-decoration: none;
 }
 #head p.beta_tag {
   font-size: 1.2em;
@@ -26,5 +47,4 @@ body {
 }
 #head p.beta_tag a {
   color: #999;
-  text-decoration: none;
 }

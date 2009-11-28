@@ -1,3 +1,5 @@
-<% RepoList.list.each do |repo| %>
-  <p><a href="/<%= repo.glog_name %>/commits"><%= repo.glog_name %></a></p>
-<% end %>
+<ul class="repo_list">
+  <% RepoList.list.each do |repo| %>
+    <li><a href="/<%= repo.glog_name %>/commits"><%= repo.glog_name %></a></li>
+  <% end %>
+</ul>
