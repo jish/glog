@@ -1,8 +1,8 @@
 <% @commits.each do |commit| %>
   <div class="commit_summary">
-    <p>
-      <a href="/<%= @repo.glog_name %>/commits/<%= commit.id %>"><pre><%= commit.message.split("\n").first %></pre></a>
-    </p>
+    <a href="/<%= @repo.glog_name %>/commits/<%= commit.id %>">
+      <pre><%= commit.message.split("\n").first %></pre>
+    </a>
     <p><%= commit.committer %></p>
   </div>
 <% end %>

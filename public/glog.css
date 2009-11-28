@@ -13,7 +13,7 @@ a {
   border: 1px solid #bedce7;
   margin: 10px;
 }
-.commit_summary p {
+.commit_summary p, .commit_summary pre {
   margin: 10px;
 }
 
