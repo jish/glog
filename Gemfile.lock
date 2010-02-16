@@ -7,7 +7,7 @@ dependencies:
   grit: 
     group: 
     - :default
-    version: ">= 0"
+    version: = 2.0.0
   rack: 
     group: 
     - :default
@@ -35,7 +35,7 @@ specs:
     version: 2.0.0
 - rspec: 
     version: 1.3.0
-hash: bba7e5b9be98de906a99749d1fe3126efc6a4c42
+hash: 20411b5c48f0cce90b23f3f884b1da88f66fa3c3
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
