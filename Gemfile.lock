@@ -1,0 +1,25 @@
+--- 
+dependencies: 
+  grit: 
+    group: 
+    - :default
+    version: ">= 0"
+  sinatra: 
+    group: 
+    - :default
+    version: = 1.0.a
+specs: 
+- rack: 
+    version: 1.1.0
+- sinatra: 
+    version: 1.0.a
+- mime-types: 
+    version: "1.16"
+- diff-lcs: 
+    version: 1.1.2
+- grit: 
+    version: 2.0.0
+hash: d059dec389cfe08f0576f269d6421582244af5f9
+sources: 
+- Rubygems: 
+    uri: http://gemcutter.org

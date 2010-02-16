@@ -1,12 +1,23 @@
-require 'sinatra'
-require 'grit'
+begin
+  # Try to require the preresolved locked set of gems.
+  require File.expand_path('../.bundle/environment', __FILE__)
+rescue LoadError
+  # Fall back on doing an unlocked resolve at runtime.
+  require "rubygems"
+  require "bundler"
+  Bundler.setup
+end
+Bundler.require
+
 require 'erb'
 
 $: << File.join(File.dirname(__FILE__), 'lib')
 require 'grit_ext/repo'
 require 'repo_list'
 
-RepoList.base_dir File.join(File.dirname(__FILE__), 'repos')
+RepoList.base_dir File.expand_path('../repos', __FILE__)
+
+set :root, File.dirname(__FILE__)
 
 get '/' do
   erb :home
