@@ -15,8 +15,6 @@ $: << File.join(File.dirname(__FILE__), 'lib')
 require 'grit_ext/repo'
 require 'repo_list'
 
-RepoList.base_dir File.expand_path('../repos', __FILE__)
-
 set :root, File.dirname(__FILE__)
 
 get '/' do

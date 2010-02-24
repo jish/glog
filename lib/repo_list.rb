@@ -1,7 +1,8 @@
 class RepoList
-  def self.base_dir(dir=nil)
-    @base_dir = dir if dir
-    @base_dir
+
+  def self.add_directory(dir)
+    repo = Grit::Repo.new(dir)
+    repo_map[repo.glog_name] = repo
   end
 
   def self.list
@@ -13,14 +14,7 @@ class RepoList
   end
 
   def self.repo_map
-    unless @repo_map
-      @repo_map = {}
-      Dir[File.join(RepoList.base_dir, '*.git')].each do |p|
-        r = Grit::Repo.new(p)
-        @repo_map[r.glog_name] = r
-      end
-    end
-    @repo_map
+    @repo_map ||= {}
   end
 
 end

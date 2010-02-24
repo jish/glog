@@ -4,12 +4,14 @@ require 'tmpdir'
 
 describe RepoList do
   before(:all) do
+    RepoList.repo_map.clear
     @base_dir = File.join(Dir.tmpdir, 'repo_test_dir')
     FileUtils.mkdir_p @base_dir
     %w(repo1.git repo2.git).each do |r|
-      Grit::Repo.init_bare(File.join(@base_dir, r))
+      dir = File.join(@base_dir, r)
+      Grit::Repo.init_bare dir
+      RepoList.add_directory dir
     end
-    RepoList.base_dir @base_dir
   end
 
   it "should return an item for each repo" do

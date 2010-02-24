@@ -11,11 +11,12 @@ Bundler.require(:default, :test)
 
 require File.join(File.dirname(__FILE__), '..', 'glog')
 
+GLOG_DIR = File.expand_path(File.join(File.dirname(__FILE__), '..'))
+RepoList.add_directory(GLOG_DIR)
+
 require 'spec'
 require 'spec/autorun'
 require 'spec/interop/test'
-
-GLOG_DIR = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 
 # set test environment
 set :environment, :test
