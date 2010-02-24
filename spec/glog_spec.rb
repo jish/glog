@@ -7,8 +7,16 @@ describe "Glog" do
     @app ||= Sinatra::Application
   end
 
-  it "should respond to /" do
-    get '/'
-    last_response.should be_ok
+  context "viewing the home page" do
+    before(:each) do
+      get '/'
+    end
+    it "renders" do
+      last_response.should be_ok
+    end
+    it "displays a link to the repo" do
+      last_response.body.should match(%Q{href="/glog/commits"})
+    end
   end
+
 end

@@ -12,7 +12,6 @@ Bundler.require(:default, :test)
 require File.join(File.dirname(__FILE__), '..', 'glog')
 
 GLOG_DIR = File.expand_path(File.join(File.dirname(__FILE__), '..'))
-RepoList.add_directory(GLOG_DIR)
 
 require 'spec'
 require 'spec/autorun'
@@ -23,3 +22,12 @@ set :environment, :test
 set :run, false
 set :raise_errors, true
 set :logging, false
+
+Spec::Runner.configure do |config|
+  config.before(:each) do
+    RepoList.add_directory(GLOG_DIR)
+  end
+  config.after(:each) do
+    RepoList.repo_map.clear
+  end
+end

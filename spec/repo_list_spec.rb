@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 require 'tmpdir'
 
 describe RepoList do
-  before(:all) do
+  before(:each) do
     RepoList.repo_map.clear
     @base_dir = File.join(Dir.tmpdir, 'repo_test_dir')
     FileUtils.mkdir_p @base_dir

@@ -1,6 +1,13 @@
 <div class="commit_summary">
   <pre><%= @commit.message %></pre>
   <p><%= @commit.committer %></p>
+  <% unless @commit.parents.empty? %>
+  <ul>
+    <% @commit.parents.each do |parent| %>
+      <li>Parent: <a href="/<%= @repo.glog_name %>/commits/<%= parent.id %>"><%= parent.id %></a></li>
+    <% end %>
+  </ul>
+  <% end %>
 </div>
 
 <% @commit.show.each do |c| %>
