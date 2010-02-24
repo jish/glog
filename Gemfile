@@ -6,6 +6,6 @@ gem "rack"
 gem "grit", "2.0.0"
 
 group :test do
-  gem "rack-test"
+  gem "rack-test", :require => 'rack/test'
   gem "rspec"
 end
